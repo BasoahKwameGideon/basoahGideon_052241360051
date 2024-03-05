@@ -1,0 +1,23 @@
+JTextArea textArea = new JTextArea(5, 20); // Create a text area with 5 rows and 20 columns
+JScrollPane scrollPane = new JScrollPane(textArea);
+import javax.swing.*;
+import java.awt.*;
+
+public class ScrollableTextFieldExample {
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            JFrame frame = new JFrame("Scrollable Text Field Example");
+            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            frame.setSize(300, 200);
+
+            JTextField textField = new JTextField(20); // Create a text field with a preferred width of 20 columns
+
+            // Create a JScrollPane and add the text field to it
+            JScrollPane scrollPane = new JScrollPane(textField);
+
+            frame.add(scrollPane);
+
+            frame.setVisible(true);
+        });
+    }
+}
